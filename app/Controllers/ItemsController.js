@@ -16,9 +16,9 @@ export class ItemsController{
     }
 
     moveToCart(itemId){
-        console.log(itemId)
+        
         event.preventDefault()
-            itemsService.moveToCart(itemId);
+        itemsService.moveToCart(itemId);
         
         
     }

@@ -3,7 +3,7 @@ import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
 class AppState extends EventEmitter {
-  /** @type {import('./Models/Item').Item[]} */
+  // /** @type {import('./Models/Item').Item[]} */
   
   cart = []
   items = [
@@ -15,6 +15,7 @@ class AppState extends EventEmitter {
     new Item({name: "Racquet Ball", qty: 1, price: 11, img:"https://www.pythonracquetball.com/mm5/graphics/00000001/pythonblueballbag_355x237.jpg"}),
     new Item({name: "Rugby Ball", qty: 1, price: 70, img:"https://usa.rhinorugby.com/media/catalog/product/cache/1/image/700x/9df78eab33525d08d6e5fb8d27136e95/r/e/reflex_1-better.jpg"}),
   ]
+  cartTotal = 0
 }
 export const ProxyState = new Proxy(new AppState(), {
   get(target, prop) {
